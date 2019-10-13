@@ -1,6 +1,6 @@
 # Bingo
 
-Bingo Translate Test - ByXiaoXie
+Bingo Translate Zh_cn Test - ByXiaoXie
 
 Bingo Version: 0.5.2
 
