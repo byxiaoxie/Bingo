@@ -1,0 +1,45 @@
+name: Bingo
+description: Public Bingo Plugin
+version: 0.5.1
+author: [synex, TricityGaming, Nandeska]
+api-version: 1.13
+
+main: de.synex.bingo.main.Main
+
+commands:
+  bingopl:
+    description: Standard Command
+    usage: /bingopl
+  bingorestart:
+    description: Startet das Spiel manuell neu
+    usage: /restart
+  top:
+    description: An die Oberflaeche teleportieren
+    usage: /top
+  bingo:
+    description: Oeffnet das Bingo Menu
+    usage: /bingo <start/restart>
+    aliases: b
+  start:
+    description: force Start
+    usage: /start
+  brestart:
+    description: force restart
+    usage: /brestart 
+    
+permissions:
+  bingo.defaultcmd:
+    description: Standard Command
+    default: true
+  bingo.restart:
+    description: Manuelles Neustarten
+    default: op
+  bingo.top:
+    description:
+    default: true
+  bingo.gamemaster:
+    description:
+    default: op
+  bingo.start:
+    description:
+    default: op
