@@ -465,6 +465,99 @@ public class Main extends JavaPlugin
         }
     }
     
+    public String get_Item_name(String name) {
+    	if (name=="MILK_BUCKET") {
+    		return "Å£ÄÌÍ°";
+		}
+    	else if (name=="EMERALD") {
+    		return "ÂÌ±¦Ê¯";
+		} 
+    	else if (name=="DIAMOND") {
+    		return "×êÊ¯";
+		} 
+    	else if (name=="MUSHROOM_STEW") {
+    		return "Ä¢¹½ÌÀ";
+		} 
+    	else if (name=="SANDSTONE_STAIRS") {
+    		return "É°ÑÒÂ¥ÌÝ";
+		}
+    	else if (name=="SANDSTONE_STAIRS") {
+    		return "É°ÑÒÂ¥ÌÝ";
+		}
+    	else if (name=="CACTUS") {
+    		return "ÏÉÈËÕÆ";
+		}
+    	else if (name=="PAINTING") {
+    		return "»­";
+		}
+    	else if (name=="DETECTOR_RAIL") {
+    		return "Ì½²âÌú¹ì";
+		}
+    	else if (name=="COOKED_COD") {
+    		return "Êì÷¨Óã";
+		}
+    	else if (name=="FLETCHING_TABLE") {
+    		return "ÖÆ¼ýÌ¨";
+		}
+    	else if (name=="SHIELD") {
+    		return "¶ÜÅÆ";
+		}
+    	else if (name=="PAPER") {
+    		return "Ö½";
+		}
+    	else if (name=="ANVIL") {
+    		return "ÌúÕè";
+		}
+    	else if (name=="TNT") {
+    		return "TNT";
+		}
+    	else if (name=="WHITE_BANNER") {
+    		return "°×É«ÆìÖÄ";
+		}
+    	else if (name=="CARROT_ON_A_STICK") {
+    		return "ºúÂÜ²·µö¸Í";
+		}
+    	else if (name=="DIAMOND_LEGGINGS") {
+    		return "×êÊ¯»¤ÍÈ";
+		}
+    	else if (name=="DRIED_KELP") {
+    		return "¸Éº£´ø";
+		}
+    	else if (name=="GRANITE_STAIRS") {
+    		return "»¨¸ÚÑÒ½×ÌÝ";
+		}
+    	else if (name=="PISTON") {
+    		return "»îÈû";
+		}
+    	else if (name=="GOLDEN_APPLE") {
+    		return "½ðÆ»¹û";
+		}
+    	else if (name=="ARMOR_STAND") {
+			return "¿ø¼×¼Ü";
+		}
+    	else if (name=="ENCHANTING_TABLE") {
+    		return "¸½Ä§Ì¨";
+		}
+    	else if (name=="CROSSBOW") {
+    		return "åó";
+		}
+    	else if (name=="PUMPKIN") {
+    		return "ÄÏ¹Ï";
+		}
+    	else if (name=="LECTERN") {
+    		return "½²Ì¨";
+		}
+    	else if (name=="COMPASS") {
+    		return "Ö¸ÄÏÕë";
+		}
+    	else if (name=="LIGHT_WEIGHTED_PRESSURE_PLATE") {
+    		return "ÇáÖÊ²âÖØÑ¹Á¦°å";
+		}
+    	else {
+    		return name;
+		}
+    }
+    
     public void startGame() {
         for (final Player aplayer : Bukkit.getOnlinePlayers()) {
             if (!this.t1.contains(aplayer) && !this.t2.contains(aplayer) && !this.t3.contains(aplayer)) {
@@ -579,7 +672,7 @@ public class Main extends JavaPlugin
                                     final Main this$0 = Main.this;
                                     ++this$0.gotitems1;
                                     Main.this.foundItemsT1.add(Main.this.b1);
-                                    Bukkit.broadcastMessage(foundt1.replace("%item%", Main.this.b1.getType().name()));
+                                	Bukkit.broadcastMessage(foundt1.replace("%item%", get_Item_name(Main.this.b1.getType().name())));
                                 }
                             }
                             else if (Main.this.t2.contains(p)) {
@@ -588,7 +681,7 @@ public class Main extends JavaPlugin
                                     final Main this$2 = Main.this;
                                     ++this$2.gotitems2;
                                     Main.this.foundItemsT2.add(Main.this.b1);
-                                    Bukkit.broadcastMessage(foundt2.replace("%item%", Main.this.b1.getType().name()));
+                                    Bukkit.broadcastMessage(foundt2.replace("%item%", get_Item_name(Main.this.b1.getType().name())));
                                 }
                             }
                             else if (Main.this.t3.contains(p) && !Main.this.b1t3) {
@@ -596,7 +689,7 @@ public class Main extends JavaPlugin
                                 final Main this$3 = Main.this;
                                 ++this$3.gotitems3;
                                 Main.this.foundItemsT3.add(Main.this.b1);
-                                Bukkit.broadcastMessage(foundt3.replace("%item%", Main.this.b1.getType().name()));
+                                Bukkit.broadcastMessage(foundt3.replace("%item%", get_Item_name(Main.this.b1.getType().name())));
                             }
                         }
                         if (p.getInventory().containsAtLeast(Main.this.b2, 1)) {
@@ -606,7 +699,7 @@ public class Main extends JavaPlugin
                                     final Main this$4 = Main.this;
                                     ++this$4.gotitems1;
                                     Main.this.foundItemsT1.add(Main.this.b2);
-                                    Bukkit.broadcastMessage(foundt1.replace("%item%", Main.this.b2.getType().name()));
+                                    Bukkit.broadcastMessage(foundt1.replace("%item%", get_Item_name(Main.this.b2.getType().name())));
                                 }
                             }
                             else if (Main.this.t2.contains(p)) {
@@ -615,7 +708,7 @@ public class Main extends JavaPlugin
                                     final Main this$5 = Main.this;
                                     ++this$5.gotitems2;
                                     Main.this.foundItemsT2.add(Main.this.b2);
-                                    Bukkit.broadcastMessage(foundt2.replace("%item%", Main.this.b2.getType().name()));
+                                    Bukkit.broadcastMessage(foundt2.replace("%item%", get_Item_name(Main.this.b2.getType().name())));
                                 }
                             }
                             else if (Main.this.t3.contains(p) && !Main.this.b2t3) {
@@ -623,7 +716,7 @@ public class Main extends JavaPlugin
                                 final Main this$6 = Main.this;
                                 ++this$6.gotitems3;
                                 Main.this.foundItemsT3.add(Main.this.b2);
-                                Bukkit.broadcastMessage(foundt3.replace("%item%", Main.this.b2.getType().name()));
+                                Bukkit.broadcastMessage(foundt3.replace("%item%", get_Item_name(Main.this.b2.getType().name())));
                             }
                         }
                         if (p.getInventory().containsAtLeast(Main.this.b3, 1)) {
@@ -633,7 +726,7 @@ public class Main extends JavaPlugin
                                     final Main this$7 = Main.this;
                                     ++this$7.gotitems1;
                                     Main.this.foundItemsT1.add(Main.this.b3);
-                                    Bukkit.broadcastMessage(foundt1.replace("%item%", Main.this.b3.getType().name()));
+                                    Bukkit.broadcastMessage(foundt1.replace("%item%", get_Item_name(Main.this.b3.getType().name())));
                                 }
                             }
                             else if (Main.this.t2.contains(p)) {
@@ -642,7 +735,7 @@ public class Main extends JavaPlugin
                                     final Main this$8 = Main.this;
                                     ++this$8.gotitems2;
                                     Main.this.foundItemsT2.add(Main.this.b3);
-                                    Bukkit.broadcastMessage(foundt2.replace("%item%", Main.this.b3.getType().name()));
+                                    Bukkit.broadcastMessage(foundt2.replace("%item%", get_Item_name(Main.this.b3.getType().name())));
                                 }
                             }
                             else if (Main.this.t3.contains(p) && !Main.this.b3t3) {
@@ -650,7 +743,7 @@ public class Main extends JavaPlugin
                                 final Main this$9 = Main.this;
                                 ++this$9.gotitems3;
                                 Main.this.foundItemsT3.add(Main.this.b3);
-                                Bukkit.broadcastMessage(foundt3.replace("%item%", Main.this.b3.getType().name()));
+                                Bukkit.broadcastMessage(foundt3.replace("%item%", get_Item_name(Main.this.b3.getType().name())));
                             }
                         }
                         if (p.getInventory().containsAtLeast(Main.this.b4, 1)) {
@@ -660,7 +753,7 @@ public class Main extends JavaPlugin
                                     final Main this$10 = Main.this;
                                     ++this$10.gotitems1;
                                     Main.this.foundItemsT1.add(Main.this.b4);
-                                    Bukkit.broadcastMessage(foundt1.replace("%item%", Main.this.b4.getType().name()));
+                                    Bukkit.broadcastMessage(foundt1.replace("%item%", get_Item_name(Main.this.b4.getType().name())));
                                 }
                             }
                             else if (Main.this.t2.contains(p)) {
@@ -669,7 +762,7 @@ public class Main extends JavaPlugin
                                     final Main this$11 = Main.this;
                                     ++this$11.gotitems2;
                                     Main.this.foundItemsT2.add(Main.this.b4);
-                                    Bukkit.broadcastMessage(foundt2.replace("%item%", Main.this.b4.getType().name()));
+                                    Bukkit.broadcastMessage(foundt2.replace("%item%", get_Item_name(Main.this.b4.getType().name())));
                                 }
                             }
                             else if (Main.this.t3.contains(p) && !Main.this.b4t3) {
@@ -677,7 +770,7 @@ public class Main extends JavaPlugin
                                 final Main this$12 = Main.this;
                                 ++this$12.gotitems3;
                                 Main.this.foundItemsT3.add(Main.this.b4);
-                                Bukkit.broadcastMessage(foundt3.replace("%item%", Main.this.b4.getType().name()));
+                                Bukkit.broadcastMessage(foundt3.replace("%item%", get_Item_name(Main.this.b4.getType().name())));
                             }
                         }
                         if (p.getInventory().containsAtLeast(Main.this.b5, 1)) {
@@ -687,7 +780,7 @@ public class Main extends JavaPlugin
                                     final Main this$13 = Main.this;
                                     ++this$13.gotitems1;
                                     Main.this.foundItemsT1.add(Main.this.b5);
-                                    Bukkit.broadcastMessage(foundt1.replace("%item%", Main.this.b5.getType().name()));
+                                    Bukkit.broadcastMessage(foundt1.replace("%item%", get_Item_name(Main.this.b5.getType().name())));
                                 }
                             }
                             else if (Main.this.t2.contains(p)) {
@@ -696,7 +789,7 @@ public class Main extends JavaPlugin
                                     final Main this$14 = Main.this;
                                     ++this$14.gotitems2;
                                     Main.this.foundItemsT2.add(Main.this.b5);
-                                    Bukkit.broadcastMessage(foundt2.replace("%item%", Main.this.b5.getType().name()));
+                                    Bukkit.broadcastMessage(foundt2.replace("%item%", get_Item_name(Main.this.b5.getType().name())));
                                 }
                             }
                             else if (Main.this.t3.contains(p) && !Main.this.b5t3) {
@@ -704,7 +797,7 @@ public class Main extends JavaPlugin
                                 final Main this$15 = Main.this;
                                 ++this$15.gotitems3;
                                 Main.this.foundItemsT3.add(Main.this.b5);
-                                Bukkit.broadcastMessage(foundt3.replace("%item%", Main.this.b5.getType().name()));
+                                Bukkit.broadcastMessage(foundt3.replace("%item%", get_Item_name(Main.this.b5.getType().name())));
                             }
                         }
                         if (p.getInventory().containsAtLeast(Main.this.b6, 1)) {
@@ -714,7 +807,7 @@ public class Main extends JavaPlugin
                                     final Main this$16 = Main.this;
                                     ++this$16.gotitems1;
                                     Main.this.foundItemsT1.add(Main.this.b6);
-                                    Bukkit.broadcastMessage(foundt1.replace("%item%", Main.this.b6.getType().name()));
+                                    Bukkit.broadcastMessage(foundt1.replace("%item%", get_Item_name(Main.this.b6.getType().name())));
                                 }
                             }
                             else if (Main.this.t2.contains(p)) {
@@ -723,7 +816,7 @@ public class Main extends JavaPlugin
                                     final Main this$17 = Main.this;
                                     ++this$17.gotitems2;
                                     Main.this.foundItemsT2.add(Main.this.b6);
-                                    Bukkit.broadcastMessage(foundt2.replace("%item%", Main.this.b6.getType().name()));
+                                    Bukkit.broadcastMessage(foundt2.replace("%item%", get_Item_name(Main.this.b6.getType().name())));
                                 }
                             }
                             else if (Main.this.t3.contains(p) && !Main.this.b6t3) {
@@ -731,7 +824,7 @@ public class Main extends JavaPlugin
                                 final Main this$18 = Main.this;
                                 ++this$18.gotitems3;
                                 Main.this.foundItemsT3.add(Main.this.b6);
-                                Bukkit.broadcastMessage(foundt3.replace("%item%", Main.this.b6.getType().name()));
+                                Bukkit.broadcastMessage(foundt3.replace("%item%", get_Item_name(Main.this.b6.getType().name())));
                             }
                         }
                         if (p.getInventory().containsAtLeast(Main.this.b7, 1)) {
@@ -741,7 +834,7 @@ public class Main extends JavaPlugin
                                     final Main this$19 = Main.this;
                                     ++this$19.gotitems1;
                                     Main.this.foundItemsT1.add(Main.this.b7);
-                                    Bukkit.broadcastMessage(foundt1.replace("%item%", Main.this.b7.getType().name()));
+                                    Bukkit.broadcastMessage(foundt1.replace("%item%", get_Item_name(Main.this.b7.getType().name())));
                                 }
                             }
                             else if (Main.this.t2.contains(p)) {
@@ -750,7 +843,7 @@ public class Main extends JavaPlugin
                                     final Main this$20 = Main.this;
                                     ++this$20.gotitems2;
                                     Main.this.foundItemsT2.add(Main.this.b7);
-                                    Bukkit.broadcastMessage(foundt2.replace("%item%", Main.this.b7.getType().name()));
+                                    Bukkit.broadcastMessage(foundt2.replace("%item%", get_Item_name(Main.this.b7.getType().name())));
                                 }
                             }
                             else if (Main.this.t3.contains(p) && !Main.this.b7t3) {
@@ -758,7 +851,7 @@ public class Main extends JavaPlugin
                                 final Main this$21 = Main.this;
                                 ++this$21.gotitems3;
                                 Main.this.foundItemsT3.add(Main.this.b7);
-                                Bukkit.broadcastMessage(foundt3.replace("%item%", Main.this.b7.getType().name()));
+                                Bukkit.broadcastMessage(foundt3.replace("%item%", get_Item_name(Main.this.b7.getType().name())));
                             }
                         }
                         if (p.getInventory().containsAtLeast(Main.this.b8, 1)) {
@@ -768,7 +861,7 @@ public class Main extends JavaPlugin
                                     final Main this$22 = Main.this;
                                     ++this$22.gotitems1;
                                     Main.this.foundItemsT1.add(Main.this.b8);
-                                    Bukkit.broadcastMessage(foundt1.replace("%item%", Main.this.b8.getType().name()));
+                                    Bukkit.broadcastMessage(foundt1.replace("%item%", get_Item_name(Main.this.b8.getType().name())));
                                 }
                             }
                             else if (Main.this.t2.contains(p)) {
@@ -777,7 +870,7 @@ public class Main extends JavaPlugin
                                     final Main this$23 = Main.this;
                                     ++this$23.gotitems2;
                                     Main.this.foundItemsT2.add(Main.this.b8);
-                                    Bukkit.broadcastMessage(foundt2.replace("%item%", Main.this.b8.getType().name()));
+                                    Bukkit.broadcastMessage(foundt2.replace("%item%", get_Item_name(Main.this.b8.getType().name())));
                                 }
                             }
                             else if (Main.this.t3.contains(p) && !Main.this.b8t3) {
@@ -785,7 +878,7 @@ public class Main extends JavaPlugin
                                 final Main this$24 = Main.this;
                                 ++this$24.gotitems3;
                                 Main.this.foundItemsT3.add(Main.this.b8);
-                                Bukkit.broadcastMessage(foundt3.replace("%item%", Main.this.b8.getType().name()));
+                                Bukkit.broadcastMessage(foundt3.replace("%item%", get_Item_name(Main.this.b8.getType().name())));
                             }
                         }
                         if (p.getInventory().containsAtLeast(Main.this.b9, 1)) {
@@ -795,7 +888,7 @@ public class Main extends JavaPlugin
                                     final Main this$25 = Main.this;
                                     ++this$25.gotitems1;
                                     Main.this.foundItemsT1.add(Main.this.b9);
-                                    Bukkit.broadcastMessage(foundt1.replace("%item%", Main.this.b9.getType().name()));
+                                    Bukkit.broadcastMessage(foundt1.replace("%item%", get_Item_name(Main.this.b9.getType().name())));
                                 }
                             }
                             else if (Main.this.t2.contains(p)) {
@@ -804,7 +897,7 @@ public class Main extends JavaPlugin
                                     final Main this$26 = Main.this;
                                     ++this$26.gotitems2;
                                     Main.this.foundItemsT2.add(Main.this.b9);
-                                    Bukkit.broadcastMessage(foundt2.replace("%item%", Main.this.b9.getType().name()));
+                                    Bukkit.broadcastMessage(foundt2.replace("%item%", get_Item_name(Main.this.b9.getType().name())));
                                 }
                             }
                             else if (Main.this.t3.contains(p) && !Main.this.b9t3) {
@@ -812,7 +905,7 @@ public class Main extends JavaPlugin
                                 final Main this$27 = Main.this;
                                 ++this$27.gotitems3;
                                 Main.this.foundItemsT3.add(Main.this.b9);
-                                Bukkit.broadcastMessage(foundt3.replace("%item%", Main.this.b9.getType().name()));
+                                Bukkit.broadcastMessage(foundt3.replace("%item%", get_Item_name(Main.this.b9.getType().name())));
                             }
                         }
                         if (Main.this.gotitems1 == 9) {

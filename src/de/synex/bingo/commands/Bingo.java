@@ -15,6 +15,99 @@ public class Bingo implements CommandExecutor
         this.main = m;
     }
     
+    public String get_Item_name(String name) {
+    	if (name=="MILK_BUCKET") {
+    		return "Å£ÄÌÍ°";
+		}
+    	else if (name=="EMERALD") {
+    		return "ÂÌ±¦Ê¯";
+		} 
+    	else if (name=="DIAMOND") {
+    		return "×êÊ¯";
+		} 
+    	else if (name=="MUSHROOM_STEW") {
+    		return "Ä¢¹½ÌÀ";
+		} 
+    	else if (name=="SANDSTONE_STAIRS") {
+    		return "É°ÑÒÂ¥ÌÝ";
+		}
+    	else if (name=="SANDSTONE_STAIRS") {
+    		return "É°ÑÒÂ¥ÌÝ";
+		}
+    	else if (name=="CACTUS") {
+    		return "ÏÉÈËÕÆ";
+		}
+    	else if (name=="PAINTING") {
+    		return "»­";
+		}
+    	else if (name=="DETECTOR_RAIL") {
+    		return "Ì½²âÌú¹ì";
+		}
+    	else if (name=="COOKED_COD") {
+    		return "Êì÷¨Óã";
+		}
+    	else if (name=="FLETCHING_TABLE") {
+    		return "ÖÆ¼ýÌ¨";
+		}
+    	else if (name=="SHIELD") {
+    		return "¶ÜÅÆ";
+		}
+    	else if (name=="PAPER") {
+    		return "Ö½";
+		}
+    	else if (name=="ANVIL") {
+    		return "ÌúÕè";
+		}
+    	else if (name=="TNT") {
+    		return "TNT";
+		}
+    	else if (name=="WHITE_BANNER") {
+    		return "°×É«ÆìÖÄ";
+		}
+    	else if (name=="CARROT_ON_A_STICK") {
+    		return "ºúÂÜ²·µö¸Í";
+		}
+    	else if (name=="DIAMOND_LEGGINGS") {
+    		return "×êÊ¯»¤ÍÈ";
+		}
+    	else if (name=="DRIED_KELP") {
+    		return "¸Éº£´ø";
+		}
+    	else if (name=="GRANITE_STAIRS") {
+    		return "»¨¸ÚÑÒ½×ÌÝ";
+		}
+    	else if (name=="PISTON") {
+    		return "»îÈû";
+		}
+    	else if (name=="GOLDEN_APPLE") {
+    		return "½ðÆ»¹û";
+		}
+    	else if (name=="ARMOR_STAND") {
+			return "¿ø¼×¼Ü";
+		}
+    	else if (name=="ENCHANTING_TABLE") {
+    		return "¸½Ä§Ì¨";
+		}
+    	else if (name=="CROSSBOW") {
+    		return "åó";
+		}
+    	else if (name=="PUMPKIN") {
+    		return "ÄÏ¹Ï";
+		}
+    	else if (name=="LECTERN") {
+    		return "½²Ì¨";
+		}
+    	else if (name=="COMPASS") {
+    		return "Ö¸ÄÏÕë";
+		}
+    	else if (name=="LIGHT_WEIGHTED_PRESSURE_PLATE") {
+    		return "ÇáÖÊ²âÖØÑ¹Á¦°å";
+		}
+    	else {
+    		return name;
+		}
+    }
+    
     public boolean onCommand(final CommandSender sender, final Command cmd, final String label, final String[] args) {
         final Player p = (Player)sender;
         if (sender instanceof Player) {
@@ -38,75 +131,7 @@ public class Bingo implements CommandExecutor
                         if (!this.main.foundItemsT1.isEmpty()) {
                             p.sendMessage(String.valueOf(this.main.getCL().prefix) + " " + this.main.getCL().yourteamfoundfollowingitemsalready);
                             for (final ItemStack founditems : this.main.foundItemsT1) {
-                            	if (founditems.getType().name()=="MILK_BUCKET") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "Å£ÄÌÍ°");
-								}
-                            	else if (founditems.getType().name()=="EMERALD") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "ÂÌ±¦Ê¯");
-								} 
-                            	else if (founditems.getType().name()=="DIAMOND") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "×êÊ¯");
-								} 
-                            	else if (founditems.getType().name()=="MUSHROOM_SOUP") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "Ä¢¹½ÌÀ");
-								} 
-                            	else if (founditems.getType().name()=="SANDSTONE_STAIRS") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "É°ÑÒÂ¥ÌÝ");
-								}
-                            	else if (founditems.getType().name()=="SANDSTONE_STAIRS") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "É°ÑÒÂ¥ÌÝ");
-								}
-                            	else if (founditems.getType().name()=="CACTUS") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "ÏÉÈËÕÆ");
-								}
-                            	else if (founditems.getType().name()=="PAINTING") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "»­");
-								}
-                            	else if (founditems.getType().name()=="DETECTOR_RAIL") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "Ì½²âÌú¹ì");
-								}
-                            	else if (founditems.getType().name()=="COOKED_COD") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "Êì÷¨Óã");
-								}
-                            	else if (founditems.getType().name()=="FLETCHING_TABLE") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "ÖÆ¼ýÌ¨");
-								}
-                            	else if (founditems.getType().name()=="SHIELD") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "¶ÜÅÆ");
-								}
-                            	else if (founditems.getType().name()=="PAPER") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "Ö½");
-								}
-                            	else if (founditems.getType().name()=="ANVIL") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "ÌúÕè");
-								}
-                            	else if (founditems.getType().name()=="TNT") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "TNT");
-								}
-                            	else if (founditems.getType().name()=="WHITE_BANNER") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "°×É«ÆìÖÄ");
-								}
-                            	else if (founditems.getType().name()=="CARROT_ON_A_STICK") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "ºúÂÜ²·µö¸Í");
-								}
-                            	else if (founditems.getType().name()=="DIAMOND_LEGGINGS") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "×êÊ¯»¤ÍÈ");
-								}
-                            	else if (founditems.getType().name()=="DRIED_KELP") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "¸Éº£´ø");
-								}
-                            	else if (founditems.getType().name()=="GRANITE_STAIRS") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "»¨¸ÚÑÒ½×ÌÝ");
-								}
-                            	else if (founditems.getType().name()=="PISTON") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "»îÈû");
-								}
-                            	else if (founditems.getType().name()=="GOLDEN_APPLE") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "½ðÆ»¹û");
-								}
-                            	else {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + founditems.getType());
-								}
+                            	p.sendMessage("¡ì2[Bingo] ¡ìe" + get_Item_name(founditems.getType().name()));
                             }
                         }
                     }
@@ -114,150 +139,14 @@ public class Bingo implements CommandExecutor
                         if (!this.main.foundItemsT2.isEmpty()) {
                             p.sendMessage(String.valueOf(this.main.getCL().prefix) + " " + this.main.getCL().yourteamfoundfollowingitemsalready);
                             for (final ItemStack founditems : this.main.foundItemsT2) {
-                            	if (founditems.getType().name()=="MILK_BUCKET") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "Å£ÄÌÍ°");
-								}
-                            	else if (founditems.getType().name()=="EMERALD") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "ÂÌ±¦Ê¯");
-								} 
-                            	else if (founditems.getType().name()=="DIAMOND") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "×êÊ¯");
-								} 
-                            	else if (founditems.getType().name()=="MUSHROOM_SOUP") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "Ä¢¹½ÌÀ");
-								} 
-                            	else if (founditems.getType().name()=="SANDSTONE_STAIRS") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "É°ÑÒÂ¥ÌÝ");
-								}
-                            	else if (founditems.getType().name()=="SANDSTONE_STAIRS") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "É°ÑÒÂ¥ÌÝ");
-								}
-                            	else if (founditems.getType().name()=="CACTUS") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "ÏÉÈËÕÆ");
-								}
-                            	else if (founditems.getType().name()=="PAINTING") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "»­");
-								}
-                            	else if (founditems.getType().name()=="DETECTOR_RAIL") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "Ì½²âÌú¹ì");
-								}
-                            	else if (founditems.getType().name()=="COOKED_COD") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "Êì÷¨Óã");
-								}
-                            	else if (founditems.getType().name()=="FLETCHING_TABLE") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "ÖÆ¼ýÌ¨");
-								}
-                            	else if (founditems.getType().name()=="SHIELD") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "¶ÜÅÆ");
-								}
-                            	else if (founditems.getType().name()=="PAPER") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "Ö½");
-								}
-                            	else if (founditems.getType().name()=="ANVIL") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "ÌúÕè");
-								}
-                            	else if (founditems.getType().name()=="TNT") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "TNT");
-								}
-                            	else if (founditems.getType().name()=="WHITE_BANNER") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "°×É«ÆìÖÄ");
-								}
-                            	else if (founditems.getType().name()=="CARROT_ON_A_STICK") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "ºúÂÜ²·µö¸Í");
-								}
-                            	else if (founditems.getType().name()=="DIAMOND_LEGGINGS") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "×êÊ¯»¤ÍÈ");
-								}
-                            	else if (founditems.getType().name()=="DRIED_KELP") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "¸Éº£´ø");
-								}
-                            	else if (founditems.getType().name()=="GRANITE_STAIRS") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "»¨¸ÚÑÒ½×ÌÝ");
-								}
-                            	else if (founditems.getType().name()=="PISTON") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "»îÈû");
-								}
-                            	else if (founditems.getType().name()=="GOLDEN_APPLE") {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + "½ðÆ»¹û");
-								}
-                            	else {
-                            		p.sendMessage("¡ì2[Bingo] ¡ìe" + founditems.getType());
-								}
+                            	p.sendMessage("¡ì2[Bingo] ¡ìe" + get_Item_name(founditems.getType().name()));
                             }
                         }
                     }
                     else if (this.main.t3.contains(p) && !this.main.foundItemsT3.isEmpty()) {
                         p.sendMessage(String.valueOf(this.main.getCL().prefix) + " " + this.main.getCL().yourteamfoundfollowingitemsalready);
                         for (final ItemStack founditems : this.main.foundItemsT3) {
-                        	if (founditems.getType().name()=="MILK_BUCKET") {
-                        		p.sendMessage("¡ì2[Bingo] ¡ìe" + "Å£ÄÌÍ°");
-							}
-                        	else if (founditems.getType().name()=="EMERALD") {
-                        		p.sendMessage("¡ì2[Bingo] ¡ìe" + "ÂÌ±¦Ê¯");
-							} 
-                        	else if (founditems.getType().name()=="DIAMOND") {
-                        		p.sendMessage("¡ì2[Bingo] ¡ìe" + "×êÊ¯");
-							} 
-                        	else if (founditems.getType().name()=="MUSHROOM_SOUP") {
-                        		p.sendMessage("¡ì2[Bingo] ¡ìe" + "Ä¢¹½ÌÀ");
-							} 
-                        	else if (founditems.getType().name()=="SANDSTONE_STAIRS") {
-                        		p.sendMessage("¡ì2[Bingo] ¡ìe" + "É°ÑÒÂ¥ÌÝ");
-							}
-                        	else if (founditems.getType().name()=="SANDSTONE_STAIRS") {
-                        		p.sendMessage("¡ì2[Bingo] ¡ìe" + "É°ÑÒÂ¥ÌÝ");
-							}
-                        	else if (founditems.getType().name()=="CACTUS") {
-                        		p.sendMessage("¡ì2[Bingo] ¡ìe" + "ÏÉÈËÕÆ");
-							}
-                        	else if (founditems.getType().name()=="PAINTING") {
-                        		p.sendMessage("¡ì2[Bingo] ¡ìe" + "»­");
-							}
-                        	else if (founditems.getType().name()=="DETECTOR_RAIL") {
-                        		p.sendMessage("¡ì2[Bingo] ¡ìe" + "Ì½²âÌú¹ì");
-							}
-                        	else if (founditems.getType().name()=="COOKED_COD") {
-                        		p.sendMessage("¡ì2[Bingo] ¡ìe" + "Êì÷¨Óã");
-							}
-                        	else if (founditems.getType().name()=="FLETCHING_TABLE") {
-                        		p.sendMessage("¡ì2[Bingo] ¡ìe" + "ÖÆ¼ýÌ¨");
-							}
-                        	else if (founditems.getType().name()=="SHIELD") {
-                        		p.sendMessage("¡ì2[Bingo] ¡ìe" + "¶ÜÅÆ");
-							}
-                        	else if (founditems.getType().name()=="PAPER") {
-                        		p.sendMessage("¡ì2[Bingo] ¡ìe" + "Ö½");
-							}
-                        	else if (founditems.getType().name()=="ANVIL") {
-                        		p.sendMessage("¡ì2[Bingo] ¡ìe" + "ÌúÕè");
-							}
-                        	else if (founditems.getType().name()=="TNT") {
-                        		p.sendMessage("¡ì2[Bingo] ¡ìe" + "TNT");
-							}
-                        	else if (founditems.getType().name()=="WHITE_BANNER") {
-                        		p.sendMessage("¡ì2[Bingo] ¡ìe" + "°×É«ÆìÖÄ");
-							}
-                        	else if (founditems.getType().name()=="CARROT_ON_A_STICK") {
-                        		p.sendMessage("¡ì2[Bingo] ¡ìe" + "ºúÂÜ²·µö¸Í");
-							}
-                        	else if (founditems.getType().name()=="DIAMOND_LEGGINGS") {
-                        		p.sendMessage("¡ì2[Bingo] ¡ìe" + "×êÊ¯»¤ÍÈ");
-							}
-                        	else if (founditems.getType().name()=="DRIED_KELP") {
-                        		p.sendMessage("¡ì2[Bingo] ¡ìe" + "¸Éº£´ø");
-							}
-                        	else if (founditems.getType().name()=="GRANITE_STAIRS") {
-                        		p.sendMessage("¡ì2[Bingo] ¡ìe" + "»¨¸ÚÑÒ½×ÌÝ");
-							}
-                        	else if (founditems.getType().name()=="PISTON") {
-                        		p.sendMessage("¡ì2[Bingo] ¡ìe" + "»îÈû");
-							}
-                        	else if (founditems.getType().name()=="GOLDEN_APPLE") {
-                        		p.sendMessage("¡ì2[Bingo] ¡ìe" + "½ðÆ»¹û");
-							}
-                        	else {
-                        		p.sendMessage("¡ì2[Bingo] ¡ìe" + founditems.getType());
-							}
+                        	p.sendMessage("¡ì2[Bingo] ¡ìe" + get_Item_name(founditems.getType().name()));
                         }
                     }
                 }
