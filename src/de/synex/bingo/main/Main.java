@@ -21,7 +21,6 @@ import net.md_5.bungee.api.chat.*;
 import org.bukkit.inventory.meta.*;
 import java.util.*;
 import org.bukkit.*;
-import org.bukkit.ChatColor;
 
 public class Main extends JavaPlugin
 {
@@ -170,9 +169,6 @@ public class Main extends JavaPlugin
         this.foundItemsT3 = new ArrayList<ItemStack>();
     }
     
-    /*
-     * onEnable 服务器加载
-     */
     public void onEnable() {
         this.createCustomConfig();
         Main.instance = this;
@@ -196,9 +192,6 @@ public class Main extends JavaPlugin
         Bukkit.getConsoleSender().sendMessage(String.valueOf(this.getCL().prefix) + " " + this.getCL().pluginstarted);
     }
     
-    /*
-     * onDisable 服务器关闭
-     */
     public void onDisable() {
         this.deleteWorld();
         Bukkit.getConsoleSender().sendMessage(String.valueOf(this.getCL().prefix) + " " + this.getCL().pluginstopped);
@@ -500,12 +493,12 @@ public class Main extends JavaPlugin
         }
         this.GameStarted = true;
         this.LobbyStatus = false;
-        final int l1x = ThreadLocalRandom.current().nextInt(-7000, 7000);
-        final int l1z = ThreadLocalRandom.current().nextInt(-7000, 7000);
-        final int l2x = ThreadLocalRandom.current().nextInt(-7000, 7000);
-        final int l2z = ThreadLocalRandom.current().nextInt(-7000, 7000);
-        final int l3x = ThreadLocalRandom.current().nextInt(-7000, 7000);
-        final int l3z = ThreadLocalRandom.current().nextInt(-7000, 7000);
+        final int l1x = ThreadLocalRandom.current().nextInt(-3000, 3000);
+        final int l1z = ThreadLocalRandom.current().nextInt(-3000, 3000);
+        final int l2x = ThreadLocalRandom.current().nextInt(-3000, 3000);
+        final int l2z = ThreadLocalRandom.current().nextInt(-3000, 3000);
+        final int l3x = ThreadLocalRandom.current().nextInt(-3000, 3000);
+        final int l3z = ThreadLocalRandom.current().nextInt(-3000, 3000);
         final Location l1 = new Location(Bukkit.getWorld("bingoworld"), (double)l1x, (double)Bukkit.getWorld("bingoworld").getHighestBlockAt(l1x, l1z).getY(), (double)l1z);
         final Location l2 = new Location(Bukkit.getWorld("bingoworld"), (double)l2x, (double)Bukkit.getWorld("bingoworld").getHighestBlockAt(l2x, l2z).getY(), (double)l2z);
         final Location l3 = new Location(Bukkit.getWorld("bingoworld"), (double)l3x, (double)Bukkit.getWorld("bingoworld").getHighestBlockAt(l3x, l3z).getY(), (double)l3z);

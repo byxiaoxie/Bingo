@@ -377,8 +377,8 @@ public class Listeners implements Listener
     
     @EventHandler
     public void onRespawn(final PlayerRespawnEvent e) {
-        final int l1x = ThreadLocalRandom.current().nextInt(-7000, 7000);
-        final int l1z = ThreadLocalRandom.current().nextInt(-7000, 7000);
+        final int l1x = ThreadLocalRandom.current().nextInt(-3000, 3000);
+        final int l1z = ThreadLocalRandom.current().nextInt(-3000, 3000);
         final Location l1 = new Location(Bukkit.getWorld("bingoworld"), (double)l1x, (double)Bukkit.getWorld("bingoworld").getHighestBlockAt(l1x, l1z).getY(), (double)l1z);
         e.setRespawnLocation(l1);
         e.getPlayer().teleport(l1);
