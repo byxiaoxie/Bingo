@@ -275,16 +275,20 @@ public class Main extends JavaPlugin
                 this.t3.remove(player);
             }
             if (this.winner2 == null) {
-                player.kickPlayer(String.valueOf(this.getCL().prefix) + " " + this.getCL().kickmsgwinOnePlayer.replace("%player%", this.winner1));
+                //player.kickPlayer(String.valueOf(this.getCL().prefix) + " " + this.getCL().kickmsgwinOnePlayer.replace("%player%", this.winner1));
+            	Bukkit.broadcastMessage(String.valueOf(this.getCL().prefix) + " " + this.getCL().kickmsgwinOnePlayer.replace("%player%", this.winner1));
+            	this.GameStarted = false;
             }
             else {
-                player.kickPlayer(String.valueOf(this.getCL().prefix) + " " + this.getCL().kickmsgwinTwoPlayer.replace("%player1%", this.winner1).replace("%player2%", this.winner2));
+                //player.kickPlayer(String.valueOf(this.getCL().prefix) + " " + this.getCL().kickmsgwinTwoPlayer.replace("%player1%", this.winner1).replace("%player2%", this.winner2));
+            	Bukkit.broadcastMessage(String.valueOf(this.getCL().prefix) + " " + this.getCL().kickmsgwinTwoPlayer.replace("%player1%", this.winner1).replace("%player2%", this.winner2));
+            	this.GameStarted = false;
             }
         }
         final boolean isRestarting = true;
         this.isRestarting = isRestarting;
         if (isRestarting) {
-            this.deleteWorld();
+            //this.deleteWorld();
             final WorldCreator wc = new WorldCreator("bingoworld");
             wc.type(WorldType.NORMAL);
             Bukkit.createWorld(wc);

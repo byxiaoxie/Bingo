@@ -18,9 +18,6 @@ public class ItemName {
     	else if (name=="SANDSTONE_STAIRS") {
     		return "砂岩楼梯";
 		}
-    	else if (name=="SANDSTONE_STAIRS") {
-    		return "砂岩楼梯";
-		}
     	else if (name=="CACTUS") {
     		return "仙人掌";
 		}
@@ -61,7 +58,7 @@ public class ItemName {
     		return "干海带";
 		}
     	else if (name=="GRANITE_STAIRS") {
-    		return "花岗岩阶梯";
+    		return "花岗岩楼梯";
 		}
     	else if (name=="PISTON") {
     		return "活塞";
@@ -89,6 +86,54 @@ public class ItemName {
 		}
     	else if (name=="LIGHT_WEIGHTED_PRESSURE_PLATE") {
     		return "轻质测重压力板";
+		}
+    	else if (name=="GLASS_BOTTLE") {
+    		return "玻璃瓶";
+		}
+    	else if (name=="BOOKSHELF") {
+    		return "书架";
+		}
+    	else if (name=="SALMON_BUCKET") {
+    		return "鲑鱼捅";
+		}
+    	else if (name=="CLOCK") {
+    		return "时钟";
+		}
+    	else if (name=="LILY_PAD") {
+    		return "睡莲";
+		}
+    	else if (name=="ACTIVATOR_RAIL") {
+    		return "激活铁轨";
+		}
+    	else if (name=="JUKEBOX") {
+    		return "唱片机";
+		}
+    	else if (name=="FLINT_AND_STEEL") {
+    		return "打火石";
+		}
+    	else if (name=="DIAMOND_CHESTPLATE") {
+    		return "钻石胸甲";
+		}
+    	else if (name=="CAULDRON") {
+    		return "炼药锅";
+		}
+    	else if (name=="OBSIDIAN") {
+    		return "黑曜石";
+		}
+    	else if (name=="BELL") {
+    		return "钟";
+		}
+    	else if (name=="POWERED_RAIL") {
+    		return "充能铁轨";
+		}
+    	else if (name=="LIME_WOOL") {
+    		return "黄绿色羊毛";
+		}
+    	else if (name=="ITEM_FRAME") {
+    		return "物品展示框";
+		}
+    	else if (name=="ENDER_PEARL") {
+    		return "末影珍珠";
 		}
     	else {
     		return name;
