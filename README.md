@@ -10,9 +10,13 @@ Original address: https://www.spigotmc.org/resources/bingo-beta.71836/
 
 All bingo items:
 SANDSTONE_STAIRS
+
 CACTUS
+
 LIME_WOOL
+
 TNT
+
 EMERALD
 DETECTOR_RAIL
 GOLDEN_APPLE
