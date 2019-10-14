@@ -8,7 +8,8 @@ Support Library: https://getbukkit.org/
 
 Original address: https://www.spigotmc.org/resources/bingo-beta.71836/
 
-All bingo items:
+
+All Bingo Items:
 
 SANDSTONE_STAIRS
 
